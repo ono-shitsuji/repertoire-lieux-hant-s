@@ -16,9 +16,7 @@ class EventType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('creation_date')
-            ->add('modification_date')
-            ->add('id_user', EntityType::class, [
+            ->add('user', EntityType::class, [
                 'class' => User::class,
                 'choice_label' => 'id',
             ])
