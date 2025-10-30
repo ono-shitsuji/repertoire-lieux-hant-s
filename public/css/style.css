@@ -1,0 +1,123 @@
+/*text color put your bg in a div with a macx width and height */
+
+
+
+.neon {
+  color:chartreuse;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px orangered,
+    0 0 80px orangered,
+    0 0 90px orangered,
+    0 0 100px orangered,
+    0 0 150px orangered;
+}
+.neon2 {
+  color:crimson;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px darkmagenta,
+    0 0 80px darkmagenta,
+    0 0 90px darkmagenta,
+    0 0 100px darkmagenta,
+    0 0 150px darkmagenta;
+}
+
+
+
+.first{
+    background-color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.nav {
+    background-color:black;
+
+}
+
+header,nav {
+    border-radius: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: orangered;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: red;
+  color: black;
+}
+.box {
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 0 0 2px chartreuse, 8px 8px 0 0 orangered;
+  background-color: black;
+  color: goldenrod;
+}
+.second {
+  justify-content: space-evenly;
+}
+
+/*bloc1*/
+
+.spliter {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,auto);
+    text-transform: uppercase;
+   
+}
+
+.spliter img{
+    width: 450px;
+    height: 150px;
+}
+
+
+section img {
+    width: 40%;
+    height: 40%;
+}
+
+
+footer {
+    background-color: black;
+    padding: 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+footer img {
+  width: 20%;
+  height: 20%;
+}
+    
+
+
+
