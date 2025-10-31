@@ -3,11 +3,11 @@
 {% block title %}Liste des Evenements{% endblock %}
 
 {% block body %}
-    <h1>Liste Des Evenements</h1>
+    <h1 class="link-color d-flex justify-content-center">Liste Des Evenements</h1>
 
     
         {% for event in events %}
-            <a class="card my-3 bg-dark text-light text-decoration-none" style="width: 18rem;" href="{{ path('app_event_show', {'id': event.id}) }}">
+            <a class="card my-3 text-decoration-none " style="width: 25%;" href="{{ path('app_event_show', {'id': event.id}) }}">
                 <p class = "card-title">{{ event.title }}</p>
                 <p class = "card-text">{{ event.description }}</p>
                 {% if event.modificationDate %}
@@ -20,8 +20,8 @@
             <p colspan="6">Aucun Evenement Ajouté</p>
         {% endfor %}
     {% if is_granted('ROLE_ADMIN') %}
-    <div class = "bg-dark col-4 d-flex justify-content-center py-2 my-3" >
-        <a class=  "text-light" href="{{ path('app_event_new') }}">Nouvel Evenement</a>
+    <div class = "button col-4 d-flex justify-content-center py-2 my-3" >
+        <a class= 'link-color' href="{{ path('app_event_new') }}">Nouvel Evenement</a>
     </div>
     {% endif %}
 

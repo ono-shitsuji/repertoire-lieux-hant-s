@@ -117,7 +117,31 @@ footer img {
   width: 20%;
   height: 20%;
 }
-    
-
-
+.button{
+  background-color: midnightblue;
+  color: orangered;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.button:hover{
+  border: solid 3px chartreuse;
+  color : crimson;
+  background-color: black;
+}  
+.link-color{
+  text-decoration: none;
+  color:orangered;
+}
+.link-color:hover{
+  color:crimson
+}
+.form_label{
+  color:crimson;
+}
+.card{
+  background-color: midnightblue;
+  color: orangered;
+  text-decoration: none;
+  border-radius: 10px;
+}
 
