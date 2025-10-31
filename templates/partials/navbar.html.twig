@@ -1,35 +1,36 @@
 
 <div class="first">
         
-        <hr>
+    <hr class = "neon">
     <h1 class="neon"><img src="{{ asset('img/lantern.gif') }} " ><p>🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯</p>  lieux effrayants <p>🕯 🕯  🕯 🕯  🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯 🕯 🕯  🕯</p></h1>
-    <hr>
+    <hr class = "neon">
     <div class="second">
-     <navbar>
+      <navbar>
      
-         <ul>   
-        <li>
-          <a class="neon" >A propos</a>
-          link
-        </li>
- 
-        <li >
-          <a class="neon">Connexion</a>
-        </li>
- 
-         <li>
-          <a class="neon">Déconnexion</a>
-        </li>
- 
-         <li>
-          <a class="neon">Inscription</a>
-        </li>
-          
-      </ul>
-        </navbar>
-        <hr>       
-        </div>       
-    </div>
+        <ul>
+          <li>
+            <a class="neon" href= "{{path('app_home')}}">Accueil</a>
+          </li>
+          <li>
+            <a class="neon" href= "{{path('app_event_index')}}">Liste Des Evenements</a>
+          </li>
+          {% if app.user %}
+            <li>
+              <a class="neon" href="{{path('app_logout')}}">Déconnexion</a>
+            </li>
+          {% else %}
+            <li>
+              <a class="neon" href="{{path('app_register')}}">Inscription</a>
+            </li>
+            <li>
+              <a class="neon" href= "{{path('app_login')}}" >Connexion</a>
+            </li>
+          {% endif %}
+        </ul>
+      </navbar>
+      <hr class = "neon">       
+    </div>       
+  </div>
 
 <div class="container" style="background-image:url('{{ asset ('/img/rain.gif') }}')">
 
