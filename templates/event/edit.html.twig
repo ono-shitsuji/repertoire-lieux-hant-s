@@ -1,13 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Event{% endblock %}
+{% block title %}Modifier{% endblock %}
 
 {% block body %}
-    <h1>Edit Event</h1>
-
-    {{ include('event/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_event_index') }}">Retour</a>
-
+    <h1 class= "neon2">Modifier Evenement</h1>
+<div class = "container d-flex flex-row justify-content-center neon2">
+    {{ include('event/_form.html.twig', {'button_label': 'Modifier'}) }}
+</div>
     {{ include('event/_delete_form.html.twig') }}
+    <a class = "btn button my-2" href="{{ path('app_event_index') }}">Retour</a>
 {% endblock %}

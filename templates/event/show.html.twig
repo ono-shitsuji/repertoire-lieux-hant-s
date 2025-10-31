@@ -3,23 +3,21 @@
 {% block title %}Event{% endblock %}
 
 {% block body %}
-    <h1>Event</h1>
-                <th>Id</th>
-                <td>{{ event.id }}</td>
+    <h1 class = "link-color">Evenement</h1>
 
-                <th>Title</th>
-                <td>{{ event.title }}</td>
-                <th>Description</th>
-                <td>{{ event.description }}</td>
-    {% if event.modificationDate %}
-        <p>Dernière modification le :{{ event.modificationDate ? event.modificationDate|date('Y-m-d') : '' }}</p>
-    {% else %}
-        <p>Ajouté le : {{ event.creationDate ? event.creationDate|date('Y-m-d') : '' }} </p>
-    {% endif %}
+     <div class="card my-3 text-decoration-none" style="width: 18rem;" href="{{ path('app_event_show', {'id': event.id}) }}">
+        <p class = "card-title">{{ event.title }}</p>
+        <p class = "card-text">{{ event.description }}</p>
+        {% if event.modificationDate %}
+            <p class = "card-text">Dernière modification le :{{ event.modificationDate ? event.modificationDate|date('Y-m-d') : '' }}</p>
+        {% else %}
+            <p class = "card-text">Ajouté le : {{ event.creationDate ? event.creationDate|date('Y-m-d') : '' }} </p>
+        {% endif %}      
+    </div>
 
-    <a href="{{ path('app_event_index') }}">Retour</a>
+    <a class= "button py-2 px-3 mx-2 my-3" href="{{ path('app_event_index') }}">Retour</a>
 
-    <a href="{{ path('app_event_edit', {'id': event.id}) }}">Modifier</a>
+    <a class= "button py-2 px-3 mx-2 my-3" href="{{ path('app_event_edit', {'id': event.id}) }}">Modifier</a>
 
     {{ include('event/_delete_form.html.twig') }}
 {% endblock %}
